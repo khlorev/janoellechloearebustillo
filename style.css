@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #fcd6f9, #e6d6f9); /* pastel pink + violet */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* iOS-style font */
+}
+
+.card-container {
+  perspective: 1200px;
+}
+
+.card {
+  width: 560px;   /* bigger but not too much */
+  height: 380px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 24px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.2);
+  padding: 30px 40px;
+  border: 3px solid #d6a6f9;
+}
+
+.card-front {
+  background: #fff0f6;
+  color: #4a2c5f;
+}
+
+.card-back {
+  background: linear-gradient(135deg, #fcd6f9, #f3e6ff);
+  color: #4a2c5f;
+  transform: rotateY(180deg);
+}
+
+.header-box {
+  background: linear-gradient(135deg, #f9d6eb, #e6d6f9);
+  color: #7a3ea1;
+  font-weight: 700;
+  font-size: 26px;
+  text-align: center;
+  padding: 12px 24px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.name {
+  font-size: 36px;
+  font-weight: 900; /* extra bold */
+  color: #b84a8c;
+  margin: 20px 0;
+  text-align: center; /* perfectly centered */
+}
+
+.footer {
+  margin-top: 30px;
+  font-weight: bold;
+  border-top: 2px solid #b84a8c;
+  padding-top: 14px;
+  text-align: center;
+}
+
+button {
+  margin-top: 22px;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 10px;
+  background: #d6a6f9;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+button:hover {
+  background: #b84a8c;
+}
+
+.quote-box {
+  background: #ffe6f9; /* lighter pastel pink box */
+  border-radius: 18px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 85%;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.quote {
+  font-family: "Brush Script MT", cursive; /* calligraphy style */
+  font-size: 24px;
+  font-weight: 700;
+  color: #7a3ea1;
+}
